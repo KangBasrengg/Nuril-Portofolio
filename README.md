@@ -2,12 +2,6 @@
 
 Personal portfolio website yang dibuat untuk menampilkan profil, skill, dan project dengan desain modern, responsif, dan interaktif.
 
-## 🚀 Demo
-
-👉 (Tambahkan link GitHub Pages kamu di sini kalau sudah deploy)
-
----
-
 ## 📌 Fitur Utama
 
 * ✨ Tampilan modern & responsive (mobile-first)
