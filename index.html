@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website | Nuril</title>
+    <meta name="description" content="Muhammad Nuril - Frontend Developer Portfolio. Web Development, Videography, and Video Editing services." />
+    <title>Portfolio Website | Muhammad Nuril</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -14,96 +20,303 @@
   </head>
 
   <body>
-    <!-- header design -->
+    <!-- ===== Parallax Background ===== -->
+    <div class="parallax-bg" id="parallax-bg">
+      <div class="parallax-layer parallax-layer--deep" data-parallax-speed="0.02"></div>
+      <div class="parallax-layer parallax-layer--stars" data-parallax-speed="0.05"></div>
+      <div class="parallax-layer parallax-layer--nebula" data-parallax-speed="0.08"></div>
+      <div class="parallax-layer parallax-layer--grid" data-parallax-speed="0.12"></div>
+      <div class="parallax-layer parallax-layer--orbs" data-parallax-speed="0.15">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+        <div class="floating-orb orb-4"></div>
+      </div>
+    </div>
 
-    <header class="header">
-      <a href="" class="logo">Portofolio</a>
+    <!-- ===== Animated Particles ===== -->
+    <div class="particles" id="particles"></div>
 
-      <i class='bx bx-menu' id="menu-icon"></i> 
+    <!-- ===== Cursor Glow ===== -->
+    <div class="cursor-glow" id="cursor-glow"></div>
 
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#portofolio">Portofolio</a>
+    <!-- ===== Header / Navbar ===== -->
+    <header class="header" id="header">
+      <a href="#home" class="logo">My Porto</a>
+
+      <i class='bx bx-menu' id="menu-icon"></i>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="active" data-nav>Home</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#services" data-nav>Services</a>
+        <a href="#portofolio" data-nav>Portfolio</a>
+        <a href="#contact" data-nav>Contact</a>
       </nav>
     </header>
 
-    <!-- home section design -->
-     <section class="home" id="home">
-      <div class="home-content">
+    <!-- ===== Home Section ===== -->
+    <section class="home parallax-section" id="home">
+      <div class="home-content reveal">
+        <div class="badge">
+          <i class='bx bx-code-alt'></i>
+          <span>Available for Work</span>
+        </div>
         <h3>Hello, It's Me</h3>
-        <h1>Muhammad Nuril</h1>
-        <h3>I'm A <span>Frontend Developer</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia modi nam sit! Similique iusto praesentium id labore.
-        </p>
-        
+        <h1>Muhammad<br><span class="gradient-text">Nuril</span></h1>
+        <h3>I'm A <span class="typed-text" id="typed-output"></span><span class="cursor-blink">|</span></h3>
+        <p>Passionate frontend developer crafting beautiful, responsive, and user-friendly web experiences. Turning creative ideas into pixel-perfect reality.</p>
+
         <div class="social-media">
-          <a href="mailto:nurilhuda155@gmail.com" target="_blank" rel="noopener noreferrer"><i class='bx bx-envelope' ></i></a>
-          <a href="https://www.instagram.com/nerf.cinnn/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram' ></i></a>
-          <a href="https://wa.me/6281227285146/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp' ></i></a>
-          <a href="https://www.tiktok.com/@nerf.cinnn" target="_blank" rel="noopener noreferrer"><i class='bx bxl-tiktok' ></i></a>
+          <a href="mailto:nurilhuda155@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email">
+            <i class='bx bx-envelope'></i>
+          </a>
+          <a href="https://www.instagram.com/nerf.cinnn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+            <i class='bx bxl-instagram'></i>
+          </a>
+          <a href="https://wa.me/6281227285146/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+            <i class='bx bxl-whatsapp'></i>
+          </a>
+          <a href="https://www.tiktok.com/@nerf.cinnn" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+            <i class='bx bxl-tiktok'></i>
+          </a>
+          <a href="https://github.com/KangBasrengg" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
         </div>
 
-        <a href="https://drive.google.com/drive/folders/1y1CYn6138NmmNYMSg6zQOafv2qKeOC0q?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
+        <div class="btn-group">
+          <a href="https://drive.google.com/drive/folders/1y1CYn6138NmmNYMSg6zQOafv2qKeOC0q?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class='bx bx-download'></i> Download CV
+          </a>
+          <a href="https://github.com/KangBasrengg" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class='bx bxl-github'></i> View GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="home-img">
-        <img src="images/profil-nrl1.png" alt="">
-      </div>
-     </section>
-
-    <!-- about section design -->
-     <section class="about" id="about">
-      <div class="about-img">
-        <img src="images/profil-bg.png" alt="">
+      <div class="home-img reveal reveal-delay-1">
+        <div class="img-glow"></div>
+        <div class="img-ring"></div>
+        <img src="images/profil-nrl1.png" alt="Muhammad Nuril - Frontend Developer">
       </div>
 
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Frontend Developer</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloremque eius commodi nulla? Debitis possimus tenetur praesentium fugiat. Provident quis rerum recusandae qui officia ipsum laborum consectetur dolorem facere, voluptatum consequuntur veniam nostrum sunt inventore reiciendis id perferendis beatae, nemo reprehenderit iusto ipsa. Alias, earum vel.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-     </section>
 
-    <!-- services section design -->
-     <section class="services" id="services">
-      <h2 class="heading">Our <span>Services</span></h2>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section class="about parallax-section" id="about">
+      <div class="section-divider top"></div>
+
+      <div class="about-img reveal">
+        <div class="about-img-wrapper">
+          <img src="images/profil-bg.png" alt="Muhammad Nuril">
+          <div class="about-img-overlay"></div>
+        </div>
+        <div class="experience-badge">
+          <span class="exp-number">2+</span>
+          <span class="exp-text">Years<br>Experience</span>
+        </div>
+      </div>
+
+      <div class="about-content reveal reveal-delay-1">
+        <h2 class="heading">About <span class="gradient-text">Me</span></h2>
+        <h3 class="gradient-text">Frontend Developer</h3>
+        <p>A creative and detail-oriented Frontend Developer with a passion for building modern web applications. Experienced in HTML, CSS, JavaScript, and modern frameworks. I love turning complex problems into simple, beautiful, and intuitive designs.</p>
+        
+        <div class="tech-stack">
+          <div class="tech-tag"><i class='bx bxl-html5'></i> HTML5</div>
+          <div class="tech-tag"><i class='bx bxl-css3'></i> CSS3</div>
+          <div class="tech-tag"><i class='bx bxl-javascript'></i> JavaScript</div>
+          <div class="tech-tag"><i class='bx bxl-react'></i> React</div>
+          <div class="tech-tag"><i class='bx bxl-git'></i> Git</div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">Let's Talk <i class='bx bx-right-arrow-alt'></i></a>
+      </div>
+
+      <div class="section-divider bottom"></div>
+    </section>
+
+    <!-- ===== Services Section ===== -->
+    <section class="services parallax-section" id="services">
+      <h2 class="heading reveal">My <span class="gradient-text">Services</span></h2>
 
       <div class="services-container">
-        <div class="services-box">
-          <i class='bx bx-code-alt'></i>
+        <div class="services-box reveal reveal-delay-1">
+          <div class="service-icon">
+            <i class='bx bx-code-alt'></i>
+          </div>
           <h3>Web Development</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, harum assumenda accusantium qui quis quas quaerat quasi!</p>
-          <a href="#" class="btn">Click Here</a>
+          <p>Building responsive, performant, and visually stunning websites using modern technologies and best practices.</p>
+          <a href="#contact" class="service-link">
+            Get Started <i class='bx bx-right-arrow-alt'></i>
+          </a>
         </div>
-      
 
-      <div class="services-box">
-          <i class='bx bx-video-recording'></i>
+        <div class="services-box reveal reveal-delay-2">
+          <div class="service-icon">
+            <i class='bx bx-video-recording'></i>
+          </div>
           <h3>Videography</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, harum assumenda accusantium qui quis quas quaerat quasi!</p>
-          <a href="#" class="btn">Click Here</a>
+          <p>Capturing compelling visual stories with professional-grade videography services for any project or event.</p>
+          <a href="#contact" class="service-link">
+            Get Started <i class='bx bx-right-arrow-alt'></i>
+          </a>
         </div>
 
-        <div class="services-box">
-          <i class='bx bxl-adobe' ></i>
+        <div class="services-box reveal reveal-delay-3">
+          <div class="service-icon">
+            <i class='bx bxl-adobe'></i>
+          </div>
           <h3>Video Editing</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, harum assumenda accusantium qui quis quas quaerat quasi!</p>
-          <a href="#" class="btn">Click Here</a>
+          <p>Transforming raw footage into polished, engaging content with professional editing, color grading, and effects.</p>
+          <a href="#contact" class="service-link">
+            Get Started <i class='bx bx-right-arrow-alt'></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio Section ===== -->
+    <section class="portfolio parallax-section" id="portofolio">
+      <div class="section-divider top"></div>
+
+      <h2 class="heading reveal">Latest <span class="gradient-text">Projects</span></h2>
+
+      <div class="portfolio-container">
+        <div class="portfolio-box reveal reveal-delay-1">
+          <img src="images/portfolio1.jpg" alt="Project 1">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Modern responsive landing page</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box reveal reveal-delay-2">
+          <img src="images/portfolio2.jpg" alt="Project 2">
+          <div class="portfolio-layer">
+            <h4>Web Application</h4>
+            <p>Full-stack web application</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box reveal reveal-delay-3">
+          <img src="images/portfolio3.jpg" alt="Project 3">
+          <div class="portfolio-layer">
+            <h4>UI/UX Design</h4>
+            <p>Creative user interface design</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box reveal reveal-delay-1">
+          <img src="images/portfolio4.jpg" alt="Project 4">
+          <div class="portfolio-layer">
+            <h4>Video Production</h4>
+            <p>Professional video content</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box reveal reveal-delay-2">
+          <img src="images/portfolio5.jpg" alt="Project 5">
+          <div class="portfolio-layer">
+            <h4>Brand Identity</h4>
+            <p>Complete brand development</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box reveal reveal-delay-3">
+          <img src="images/portfolio6.jpg" alt="Project 6">
+          <div class="portfolio-layer">
+            <h4>Motion Graphics</h4>
+            <p>Animated visual content</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
         </div>
       </div>
 
-     </section>
+      <div class="section-divider bottom"></div>
+    </section>
 
-    <!-- portfolio section design -->
+    <!-- ===== Contact Section ===== -->
+    <section class="contact parallax-section" id="contact">
+      <h2 class="heading reveal">Contact <span class="gradient-text">Me</span></h2>
 
-    <!-- contact section design -->
+      <form action="#" id="contact-form" class="reveal reveal-delay-1">
+        <div class="input-box">
+          <div class="input-field">
+            <input type="text" placeholder="Full Name" required id="contact-name">
+            <i class='bx bx-user'></i>
+          </div>
+          <div class="input-field">
+            <input type="email" placeholder="Email Address" required id="contact-email">
+            <i class='bx bx-envelope'></i>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input-field">
+            <input type="text" placeholder="Phone Number" id="contact-phone">
+            <i class='bx bx-phone'></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Subject" id="contact-subject">
+            <i class='bx bx-notepad'></i>
+          </div>
+        </div>
+        <div class="textarea-field">
+          <textarea cols="30" rows="10" placeholder="Your Message" required id="contact-message"></textarea>
+          <i class='bx bx-message-dots'></i>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">
+          Send Message <i class='bx bx-send'></i>
+        </button>
+      </form>
+    </section>
 
-    <!-- footer design -->
+    <!-- ===== GitHub Floating Button ===== -->
+    <a href="https://github.com/KangBasrengg" target="_blank" rel="noopener noreferrer" class="github-float" id="github-float" aria-label="Visit GitHub Profile">
+      <div class="github-float-pulse"></div>
+      <i class='bx bxl-github'></i>
+      <span>GitHub</span>
+    </a>
 
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <a href="#home" class="footer-logo">My Porto</a>
+          <p>Building digital experiences<br>that make a difference.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portofolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-social-icons">
+            <a href="mailto:nurilhuda155@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class='bx bx-envelope'></i></a>
+            <a href="https://www.instagram.com/nerf.cinnn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            <a href="https://wa.me/6281227285146/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://github.com/KangBasrengg" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Muhammad Nuril. All rights reserved.</p>
+        <a href="#home" class="footer-back-top" aria-label="Back to top">
+          <i class='bx bx-up-arrow-alt'></i>
+        </a>
+      </div>
+    </footer>
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
