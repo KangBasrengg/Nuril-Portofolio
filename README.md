@@ -75,12 +75,6 @@ Project ini dibuat untuk:
 
 ---
 
-## 📸 Preview
-
-(Tambahkan screenshot project di sini biar lebih menarik)
-
----
-
 ## 🔥 Pengembangan Selanjutnya
 
 * [ ] Tambah dark mode
