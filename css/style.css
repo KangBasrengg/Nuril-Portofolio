@@ -409,6 +409,54 @@ span {
     line-height: 1.8;
 }
 
+/* ===== Tech Stack Tags ===== */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: var(--card-bg);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.tech-tag i {
+    font-size: 2.4rem;
+    color: var(--text-muted);
+    -webkit-text-fill-color: var(--text-muted);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    transition: color 0.4s ease, -webkit-text-fill-color 0.4s ease;
+}
+
+.tech-tag:hover {
+    border-color: var(--main-color);
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--glow-color);
+    transform: translateY(-3px);
+}
+
+.tech-tag:hover i {
+    color: var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+}
+
 /* ===== Services Section ===== */
 .services h2 {
     margin-bottom: 5rem;
@@ -578,7 +626,7 @@ span {
 }
 
 .contact form {
-    max-width: 70rem;
+    max-width: 100%;
     margin: 1rem auto;
     text-align: center;
 }
@@ -589,8 +637,12 @@ span {
     flex-wrap: wrap;
 }
 
-.contact form .input-box input {
+.contact form .input-box .input-field {
     width: 49%;
+}
+
+.contact form .input-box input {
+    width: 100%;
 }
 
 .input-field,
